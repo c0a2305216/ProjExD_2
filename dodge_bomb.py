@@ -34,10 +34,7 @@ def kk_swicth(yoko, tate):  # こうかとんの向きを変える関数
     引数：縦方向、横方向
     戻り値：こうかとんsurface
     """
-    if (yoko, tate) == (0, 0):  # 何も押していないとき
-        kk_img = pg.transform.rotozoom(pg.image.load("fig/3.png"), 0, 2.0)
-        kk_img = pg.transform.flip(kk_img, True, False)
-    elif (yoko, tate) == (+5, 0):  # 右を押しているとき
+    if (yoko, tate) == (+5, 0):  # 右を押しているとき
         kk_img = pg.transform.rotozoom(pg.image.load("fig/3.png"), 0, 2.0)
         kk_img = pg.transform.flip(kk_img, True, False)
     elif (yoko, tate) == (+5, -5):  # 右と上を押しているとき
@@ -58,6 +55,8 @@ def kk_swicth(yoko, tate):  # こうかとんの向きを変える関数
         kk_img = pg.transform.rotozoom(pg.image.load("fig/3.png"), -45, 2.0)
     elif (yoko, tate) == (-5, +5):  # 左と下を押したとき
         kk_img = pg.transform.rotozoom(pg.image.load("fig/3.png"), 45, 2.0)
+    else:  # 何も押していないとき
+        kk_img = pg.transform.rotozoom(pg.image.load("fig/3.png"), 0, 2.0)
     return kk_img   
 
 
