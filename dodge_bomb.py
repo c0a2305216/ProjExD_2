@@ -61,13 +61,17 @@ def kk_swicth(yoko, tate):  # こうかとんの向きを変える関数
     return kk_img   
 
 
-# def accs_tpl():  # 演習問題２途中
-#     accs = [a for a in range(1, 11)]  # 加速度のリスト
-#     bb_imgs = []
-#     for r in range(1, 11):
-#         bb_img = pg.surface((20*r, 20*r))
-#         pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)
-#         bb_imgs.append()
+def accs_tpl():  # 演習問題２途中
+    accs = [a for a in range(1, 11)]  # 加速度のリスト
+    bb_imgs = []
+    for r in range(1, 11):
+        bb_img = pg.surface((20*r, 20*r))
+        pg.draw.circle(bb_img, (255, 0, 0), (10*r, 10*r), 10*r)
+        bb_imgs.append()
+
+
+def game_over():
+    bg = pg.surface((1800, 800))
 
 
 def main():
